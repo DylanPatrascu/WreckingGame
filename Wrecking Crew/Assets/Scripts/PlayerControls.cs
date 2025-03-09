@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,15 @@ public class PlayerControls : MonoBehaviour
 {
 
     [SerializeField] private GameObject arm;
+    [SerializeField] private CinemachineVirtualCamera playerCamera;
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private float acceleration = 2.0f;
     [SerializeField] private float deceleration = 2.0f;
     [SerializeField] private float bodyRotationSpeed = 200f;
     [SerializeField] private float armRotationSpeed = 100f;
+    [SerializeField] private float minFOV = 60f;
+    [SerializeField] private float maxFOV = 80f;
+    [SerializeField] private float cameraSpeed = 10f;
 
     private Rigidbody2D rb;
 
@@ -23,7 +28,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Start()
     {
-        Physics2D.gravity = new Vector3(0, 0, 9.81f);
+        Physics.gravity = new Vector3(0, 0, 9.81f);
 
         movementVec = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
@@ -31,8 +36,16 @@ public class PlayerControls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (movementVec != Vector2.zero) velocity = Vector2.MoveTowards(velocity, movementVec * movementSpeed, acceleration * Time.fixedDeltaTime);
-        else velocity = Vector2.MoveTowards(velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+        if (movementVec != Vector2.zero)
+        {
+            velocity = Vector2.MoveTowards(velocity, movementVec * movementSpeed, acceleration * Time.fixedDeltaTime);
+            playerCamera.m_Lens.FieldOfView = Mathf.MoveTowards(playerCamera.m_Lens.FieldOfView, maxFOV, cameraSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            velocity = Vector2.MoveTowards(velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+            playerCamera.m_Lens.FieldOfView = Mathf.MoveTowards(playerCamera.m_Lens.FieldOfView, minFOV, cameraSpeed / 2 * Time.fixedDeltaTime);
+        }
         rb.velocity = velocity;
         
         // Rotate body
