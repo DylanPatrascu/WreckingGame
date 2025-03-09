@@ -12,9 +12,9 @@ TagManager:
   - Water
   - UI
   - Arm
-  - 
-  - 
-  - 
+  - Player
+  - Ball
+  - Destructible
   - 
   - 
   - 
@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2122572517
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4062166259
+    locked: 0
+  - name: Buildings
+    uniqueID: 3236500975
     locked: 0
