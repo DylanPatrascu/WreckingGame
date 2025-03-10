@@ -44,11 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ball
-    uniqueID: 295924301
-    locked: 0
   - name: Player
     uniqueID: 4062166259
+    locked: 0
+  - name: Ball
+    uniqueID: 968238767
+    locked: 0
+  - name: Arm
+    uniqueID: 3532356907
+    locked: 0
+  - name: Particles
+    uniqueID: 3997104735
     locked: 0
   - name: Buildings
     uniqueID: 3236500975
