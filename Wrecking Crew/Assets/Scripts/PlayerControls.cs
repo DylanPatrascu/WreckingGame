@@ -8,13 +8,18 @@ using UnityEngine.UIElements;
 public class PlayerControls : MonoBehaviour
 {
 
-    [SerializeField] private GameObject arm;
-    [SerializeField] private CinemachineVirtualCamera playerCamera;
+    [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private float acceleration = 2.0f;
     [SerializeField] private float deceleration = 2.0f;
     [SerializeField] private float bodyRotationSpeed = 200f;
+
+    [Header("Arm Settings")]
+    [SerializeField] private GameObject arm;
     [SerializeField] private float armRotationSpeed = 100f;
+
+    [Header("Camera Settings")]
+    [SerializeField] private CinemachineVirtualCamera playerCamera;
     [SerializeField] private float minFOV = 60f;
     [SerializeField] private float maxFOV = 80f;
     [SerializeField] private float cameraSpeed = 10f;

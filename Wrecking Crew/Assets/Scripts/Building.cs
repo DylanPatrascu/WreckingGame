@@ -22,37 +22,42 @@ public class Building : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Rigidbody colliderRigidbody = collision.gameObject.GetComponent<Rigidbody>();
 
-        if (colliderRigidbody != null)
+        if (collision.gameObject.tag == "Ball")
         {
-            Debug.Log(colliderRigidbody.velocity.magnitude);
-            if (colliderRigidbody.velocity.magnitude > 10)
+
+            Rigidbody colliderRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+
+            if (colliderRigidbody != null)
             {
-                health -= 1;
+                if (colliderRigidbody.velocity.magnitude > 10)
+                {
+                    health -= 1;
+                }
+                else if (colliderRigidbody.velocity.magnitude > 20)
+                {
+                    health -= 2;
+                }
+                else if (colliderRigidbody.velocity.magnitude > 30)
+                {
+                    health -= 3;
+                }
             }
-            else if (colliderRigidbody.velocity.magnitude > 20) {
-                health -= 2;
-            }
-            else if (colliderRigidbody.velocity.magnitude > 30)
+
+            if (health > 0)
             {
-                health -= 3;
+                float ratio = (float)health / maxHealth;
+
+
+                if (ratio > 0.75f) buildingSprite.sprite = damageSprites[0];
+                else if (ratio > 0.50f) buildingSprite.sprite = damageSprites[1];
+                else if (ratio > 0.25f) buildingSprite.sprite = damageSprites[2];
+                else buildingSprite.sprite = damageSprites[3];
             }
+
+            if (health <= 0) DestroyBuilding();
+
         }
-
-        if (health > 0)
-        {
-            float ratio = (float)health / maxHealth;
-
-          
-            if (ratio > 0.75f) buildingSprite.sprite = damageSprites[0];
-            else if (ratio > 0.50f) buildingSprite.sprite = damageSprites[1];
-            else if (ratio > 0.25f) buildingSprite.sprite = damageSprites[2];
-            else buildingSprite.sprite = damageSprites[3];
-        }
-
-        if (health <= 0) DestroyBuilding();
-
     }
 
     private void DestroyBuilding()
