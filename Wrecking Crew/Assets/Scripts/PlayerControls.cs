@@ -39,12 +39,12 @@ public class PlayerControls : MonoBehaviour
         if (movementVec != Vector2.zero)
         {
             velocity = Vector2.MoveTowards(velocity, movementVec * movementSpeed, acceleration * Time.fixedDeltaTime);
-            playerCamera.m_Lens.FieldOfView = Mathf.MoveTowards(playerCamera.m_Lens.FieldOfView, maxFOV, cameraSpeed * Time.fixedDeltaTime);
+            playerCamera.m_Lens.OrthographicSize = Mathf.MoveTowards(playerCamera.m_Lens.OrthographicSize, maxFOV, cameraSpeed * Time.fixedDeltaTime);
         }
         else
         {
             velocity = Vector2.MoveTowards(velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
-            playerCamera.m_Lens.FieldOfView = Mathf.MoveTowards(playerCamera.m_Lens.FieldOfView, minFOV, cameraSpeed / 2 * Time.fixedDeltaTime);
+            playerCamera.m_Lens.OrthographicSize = Mathf.MoveTowards(playerCamera.m_Lens.OrthographicSize, minFOV, cameraSpeed / 2 * Time.fixedDeltaTime);
         }
         rb.velocity = velocity;
         
