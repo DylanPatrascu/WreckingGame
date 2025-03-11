@@ -591,7 +591,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 110
-  orthographic: 0
+  orthographic: 1
   orthographic size: 12.124355
   m_Depth: -1
   m_CullingMask:
@@ -14736,8 +14736,8 @@ MonoBehaviour:
   deceleration: 5
   bodyRotationSpeed: 200
   armRotationSpeed: 500
-  minFOV: 110
-  maxFOV: 130
+  minFOV: 12.12436
+  maxFOV: 20
   cameraSpeed: 10
 --- !u!1 &7296817154180114750
 GameObject:
