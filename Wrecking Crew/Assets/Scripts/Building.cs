@@ -12,11 +12,14 @@ public class Building : MonoBehaviour
 
     [SerializeField] private int health = 3;
 
+    [SerializeField] GameLogic gameLogic;
+
     private int maxHealth;
 
     private void Start()
     {
         maxHealth = health;
+        gameLogic = FindAnyObjectByType<GameLogic>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -68,5 +71,7 @@ public class Building : MonoBehaviour
 
         collider2d.SetActive(false);
         gameObject.SetActive(false);
+
+        gameLogic.AddTime(3);
     }
 }

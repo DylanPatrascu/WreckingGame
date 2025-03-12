@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class GameLogic : MonoBehaviour
 {
 
-    [SerializeField] PlayerControls player;
-    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] private PlayerControls player;
+    [SerializeField] private new CinemachineVirtualCamera camera;
 
     [Header("GameTimer")]
     [SerializeField] private Transform gameTimer;
@@ -26,6 +26,7 @@ public class GameLogic : MonoBehaviour
 
     [Header("Game Over")]
     [SerializeField] Image gameOverImage;
+    [SerializeField] GameObject gameOverButtons;
     [SerializeField] TMP_Text gameOverText;
     [SerializeField] float targetGameOverImageAlpha = 0.25f;
     [SerializeField] float gameOverScreenTime = 3;
@@ -42,6 +43,8 @@ public class GameLogic : MonoBehaviour
 
     private void Start()
     {
+        StopAllCoroutines();
+
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
 
@@ -77,6 +80,9 @@ public class GameLogic : MonoBehaviour
 
     private IEnumerator StartGame()
     {
+
+        Debug.Log("wah");
+
         float timer = countDownTime;
         float startingOrthoSize = camera.m_Lens.OrthographicSize;
 
@@ -206,6 +212,9 @@ public class GameLogic : MonoBehaviour
         Time.timeScale = 0;
         gameOverImage.color = endColor;
         gameOverText.gameObject.SetActive(true);
+        //yield return new WaitForSeconds(1);
+        gameOverButtons.SetActive(true);
+        gameOverButtons.gameObject.GetComponentInChildren<Button>().Select();
 
     }
 
@@ -226,6 +235,7 @@ public class GameLogic : MonoBehaviour
         {
             t = timer / timeAddedLabelFadeTime;
             timeAddedLabelText.color = Color.Lerp(startColor, endColor, t);
+            timer += Time.deltaTime;
             yield return null;
         }
         timeAddedLabelText.color = endColor;
