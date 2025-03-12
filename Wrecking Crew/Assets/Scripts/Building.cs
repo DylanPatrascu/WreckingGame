@@ -10,8 +10,7 @@ public class Building : MonoBehaviour
     [SerializeField] private SpriteRenderer buildingSprite;
     [SerializeField] private Sprite[] damageSprites;  
 
-    [SerializeField] private int health = 10;
-    [SerializeField] private int spriteIndex = 0;
+    [SerializeField] private int health = 3;
 
     private int maxHealth;
 
