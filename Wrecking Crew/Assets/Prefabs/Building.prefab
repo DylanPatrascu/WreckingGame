@@ -99,11 +99,11 @@ MonoBehaviour:
   explosionParticles: {fileID: 1634922305959780901}
   buildingSprite: {fileID: 7274276981681266174}
   damageSprites:
-  - {fileID: 21300000, guid: 2bf364679fb08495abc92386fd4ddb9f, type: 3}
-  - {fileID: 21300000, guid: 961f8fd71cd674ed3b3f74e9dd26d060, type: 3}
-  - {fileID: 21300000, guid: 6db8f2420705e41c4adca619d094866c, type: 3}
-  - {fileID: 21300000, guid: a4bdbb0108ab64e1db00965eaa04c9a6, type: 3}
-  health: 3
+  - {fileID: 21300000, guid: 25ebc7801a6c6485ea9cb4d3a580cb07, type: 3}
+  - {fileID: 21300000, guid: b4c428afb39234cd4891604cdc08a066, type: 3}
+  - {fileID: 21300000, guid: 70c76b5de961f461babc012280c3f96d, type: 3}
+  - {fileID: 21300000, guid: 970a1f5dd137f416d813d67eac1b9e0d, type: 3}
+  health: 4
 --- !u!1 &445476911545298821
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bc62c75df12d54078b85931c8b9c05ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6904a4cf6f7b54faba4f67bdc1a9b771, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -291,11 +291,11 @@ MonoBehaviour:
   explosionParticles: {fileID: 6589125075964864951}
   buildingSprite: {fileID: 5202015001181632040}
   damageSprites:
-  - {fileID: 21300000, guid: c1e1755bdf88c4053b4ae41458b3fc83, type: 3}
-  - {fileID: 21300000, guid: 58eac86684994440a9093c9d8cae9339, type: 3}
-  - {fileID: 21300000, guid: af0f6cbd1e17a4a1596c8889b64e7833, type: 3}
-  - {fileID: 21300000, guid: bf45bb543258044a5be23f9fb3bbbbf5, type: 3}
-  health: 3
+  - {fileID: 21300000, guid: b26bde331072848b0856681611a9ab54, type: 3}
+  - {fileID: 21300000, guid: 86f6ebf3676ca49b8bf5c28c3d828217, type: 3}
+  - {fileID: 21300000, guid: 1db777937c8144d7787bf030cd3916de, type: 3}
+  - {fileID: 21300000, guid: 1b6d9b2569bc8423db93930241a2328d, type: 3}
+  health: 4
 --- !u!1 &984547735485193759
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2bf364679fb08495abc92386fd4ddb9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25ebc7801a6c6485ea9cb4d3a580cb07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -935,7 +935,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63471715e350d41e2abecba47d156f5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc5e9e042153644e3852d6fecd0b52cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1045,11 +1045,11 @@ MonoBehaviour:
   explosionParticles: {fileID: 1895285480542320286}
   buildingSprite: {fileID: 4678141653033596924}
   damageSprites:
-  - {fileID: 21300000, guid: bc62c75df12d54078b85931c8b9c05ec, type: 3}
-  - {fileID: 21300000, guid: 58ff73e5cfa2340a2b0110618f21d906, type: 3}
-  - {fileID: 21300000, guid: 8aafbed9b85484a4ab9f42ba43a2a930, type: 3}
-  - {fileID: 21300000, guid: 2323af05757ee46c1b0904d6ab91d915, type: 3}
-  health: 3
+  - {fileID: 21300000, guid: 6904a4cf6f7b54faba4f67bdc1a9b771, type: 3}
+  - {fileID: 21300000, guid: 2bdb24c36483049cd94dfabbe0dbdc67, type: 3}
+  - {fileID: 21300000, guid: e9328151e1d8245a5abf7736f7a3fd62, type: 3}
+  - {fileID: 21300000, guid: 0542afb920dec4ce3a677a15677dd7b8, type: 3}
+  health: 4
 --- !u!1 &7410005187823299704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,11 +1307,11 @@ MonoBehaviour:
   explosionParticles: {fileID: 6602775249342493570}
   buildingSprite: {fileID: 5789369626272662292}
   damageSprites:
-  - {fileID: 21300000, guid: 63471715e350d41e2abecba47d156f5b, type: 3}
-  - {fileID: 21300000, guid: 527b0d61dad8f47fcb934e945b5f4d73, type: 3}
-  - {fileID: 21300000, guid: 8c886e8977afd455ab173bd4086bd092, type: 3}
-  - {fileID: 21300000, guid: f04386cabadee4c84ac3fea43176a1ed, type: 3}
-  health: 3
+  - {fileID: 21300000, guid: cc5e9e042153644e3852d6fecd0b52cd, type: 3}
+  - {fileID: 21300000, guid: 43134b07b9a2645d28bc2868448d0121, type: 3}
+  - {fileID: 21300000, guid: 84f8eaed7f7da403e8a08ee7968a6453, type: 3}
+  - {fileID: 21300000, guid: b6a58180c42464890854cc934f0730d0, type: 3}
+  health: 4
 --- !u!1 &8143769712974510039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1424,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c1e1755bdf88c4053b4ae41458b3fc83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b26bde331072848b0856681611a9ab54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
