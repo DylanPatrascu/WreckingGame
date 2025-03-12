@@ -80,9 +80,6 @@ public class GameLogic : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-
-        Debug.Log("wah");
-
         float timer = countDownTime;
         float startingOrthoSize = camera.m_Lens.OrthographicSize;
 
