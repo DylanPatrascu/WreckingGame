@@ -8730,11 +8730,7 @@ MonoBehaviour:
   camera: {fileID: 8017812525851587496}
   gameTimer: {fileID: 1416431773}
   gameTimerText: {fileID: 1409687253}
-<<<<<<< Updated upstream
   startTime: 5
-=======
-  startTime: 100
->>>>>>> Stashed changes
   slideInTime: 1
   NearDeathColor: {r: 1, g: 0, b: 0, a: 1}
   NearDeathBlinkSpeed: 1
