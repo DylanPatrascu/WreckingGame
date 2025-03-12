@@ -6216,6 +6216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildings:
   - {fileID: 8143769712974510039, guid: 85d804e8d35c94a3883f3c6360ec18a9, type: 3}
+  - {fileID: 8143769712974510039, guid: 59c4fbc0d5ed04d96ad96ddb5ad9184b, type: 3}
   spawnPoints:
   - {fileID: 1674684207}
   - {fileID: 506721797}
