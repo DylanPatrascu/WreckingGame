@@ -5316,8 +5316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef365bb99d22e24cb3d374a5d9a8843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuScene: MainMenu
-  blinkSpeed: 1.5
+  menuScene: 
+  blinkSpeed: 1
   normalColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
   blinkColor: {r: 0.5849056, g: 0, b: 0, a: 0}
 --- !u!114 &301053287
@@ -6218,6 +6218,7 @@ MonoBehaviour:
   - {fileID: 8143769712974510039, guid: 85d804e8d35c94a3883f3c6360ec18a9, type: 3}
   - {fileID: 8143769712974510039, guid: 59c4fbc0d5ed04d96ad96ddb5ad9184b, type: 3}
   - {fileID: 8143769712974510039, guid: 58c325b087e31464dbb59a5c36ca5c18, type: 3}
+  - {fileID: 8143769712974510039, guid: 7cd8a9bccfc33462da99d5c38f715882, type: 3}
   spawnPoints:
   - {fileID: 1674684207}
   - {fileID: 506721797}
@@ -13798,7 +13799,7 @@ MonoBehaviour:
   camera: {fileID: 8017812525851587496}
   gameTimer: {fileID: 1416431773}
   gameTimerText: {fileID: 1409687253}
-  startTime: 5
+  startTime: 100
   slideInTime: 1
   NearDeathColor: {r: 1, g: 0, b: 0, a: 1}
   NearDeathBlinkSpeed: 1
@@ -15811,7 +15812,7 @@ MonoBehaviour:
   arm: {fileID: 7296817154180114750}
   armRotationSpeed: 500
   playerCamera: {fileID: 8017812525851587496}
-  minFOV: 15
+  minFOV: 12.12436
   maxFOV: 20
   shakeTime: 0.1
   cameraSpeed: 10
