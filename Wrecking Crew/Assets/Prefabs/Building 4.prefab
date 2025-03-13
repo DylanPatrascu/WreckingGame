@@ -5119,6 +5119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3255727757137404914}
   - component: {fileID: 941595965159802786}
+  - component: {fileID: 6553573787032215044}
   m_Layer: 5
   m_Name: Building4_park_under
   m_TagString: Untagged
@@ -5193,6 +5194,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6553573787032215044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237557167269167443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &4239614814291366811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,8 +5305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 2505543772520961189}
-  destroyParticles: {fileID: 1635567539734106096}
-  explosionParticles: {fileID: 1895285480542320286}
+  destroyParticles:
+  - {fileID: 0}
   buildingSprite: {fileID: 4678141653033596924}
   damageSprites:
   - {fileID: 1472854906, guid: 1476eb35a35fe43fe9b7105865c24ade, type: 3}
@@ -5388,11 +5405,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!1 &1895285480542320286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-  m_PrefabInstance: {fileID: 3548409911990114502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4013769513083059101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
@@ -5455,11 +5467,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9605722faee4213ac5aa81526f3226, type: 3}
---- !u!1 &1635567539734106096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
-  m_PrefabInstance: {fileID: 8076827907888641735}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4701264631357091610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
