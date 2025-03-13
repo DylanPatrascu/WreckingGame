@@ -5,16 +5,20 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     [SerializeField] private GameObject collider2d;
-    [SerializeField] private GameObject destroyParticles;
-    [SerializeField] private GameObject explosionParticles;
+    [SerializeField] private List<ParticleSystem> destroyParticles;
     [SerializeField] private SpriteRenderer buildingSprite;
-    [SerializeField] private Sprite[] damageSprites;  
+    [SerializeField] private Sprite[] damageSprites;
 
     [SerializeField] private int health = 3;
 
     [SerializeField] GameLogic gameLogic;
 
     private int maxHealth;
+
+    private void OnEnable()
+    {
+        //collider2d.AddComponent<>
+    }
 
     private void Start()
     {
@@ -24,7 +28,6 @@ public class Building : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.tag == "Ball")
         {
 
@@ -50,7 +53,6 @@ public class Building : MonoBehaviour
             {
                 float ratio = (float)health / maxHealth;
 
-
                 if (ratio > 0.75f) buildingSprite.sprite = damageSprites[0];
                 else if (ratio > 0.50f) buildingSprite.sprite = damageSprites[1];
                 else if (ratio > 0.25f) buildingSprite.sprite = damageSprites[2];
@@ -64,8 +66,10 @@ public class Building : MonoBehaviour
 
     private void DestroyBuilding()
     {
-        destroyParticles.SetActive(true);
-        explosionParticles.SetActive(true);
+        foreach(ParticleSystem particle in destroyParticles)
+        {
+            particle.Play();
+        }
 
         buildingSprite.enabled = false;
 
