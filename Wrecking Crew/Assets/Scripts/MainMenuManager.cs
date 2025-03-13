@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Image mainMenuBackground;
     [SerializeField] private Image fadePanel;
+    [SerializeField] Animator animator;
     [SerializeField] private Sprite idleSprite;
     [SerializeField] private Sprite button1Sprite; 
     [SerializeField] private Sprite button2Sprite; 
@@ -15,6 +17,13 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private float animationDuration = 1f;
     [SerializeField] private float fadeDuration = 1f;
+
+    [Header("Select Animations")]
+    [SerializeField] private float blinkSpeed = 1;
+    [SerializeField] private Color normalColor;
+    [SerializeField] private Color blinkColor;
+
+    private Coroutine showSelected;
 
     private void Start()
     {
@@ -29,13 +38,16 @@ public class MainMenuManager : MonoBehaviour
             temp.a = 0f;
             fadePanel.color = temp;
         }
+
+        gameObject.GetComponentInChildren<Button>().Select();
+
     }
 
     public void StartGame()
     {
         if (mainMenuBackground && button1Sprite)
             mainMenuBackground.sprite = button1Sprite;
-
+        animator.Play("Start");
         StartCoroutine(Transition("SampleScene"));
     }
 
@@ -44,7 +56,7 @@ public class MainMenuManager : MonoBehaviour
     {
         if (mainMenuBackground && button2Sprite)
             mainMenuBackground.sprite = button2Sprite;
-
+        animator.Play("Customize");
         StartCoroutine(Transition("CustomizeScene"));
     }
 
@@ -52,7 +64,7 @@ public class MainMenuManager : MonoBehaviour
     {
         if (mainMenuBackground && button3Sprite)
             mainMenuBackground.sprite = button3Sprite;
-
+        animator.Play("Options");
         StartCoroutine(Transition("OptionsScene"));
     }
 
@@ -60,7 +72,7 @@ public class MainMenuManager : MonoBehaviour
     {
         if (mainMenuBackground && button4Sprite)
             mainMenuBackground.sprite = button4Sprite;
-
+        animator.Play("Quit");
         StartCoroutine(Transition(""));
     }
 
@@ -95,6 +107,41 @@ public class MainMenuManager : MonoBehaviour
         else
         {
             Application.Quit();
+        }
+    }
+
+    public void ButtonSelected(Button button)
+    {
+        if (showSelected != null) StopCoroutine(showSelected);
+        showSelected = StartCoroutine(ShowSelected(button));
+    }
+
+    public void ButtonDeselected(Button button)
+    {
+        button.gameObject.GetComponentInChildren<TMP_Text>().color = normalColor;
+    }
+
+    private IEnumerator ShowSelected(Button button)
+    {
+        TMP_Text buttonText = button.gameObject.GetComponentInChildren<TMP_Text>();
+        float time = 0;
+        float t;
+        bool dir = true;
+
+        while (true)
+        {
+            t = time / blinkSpeed;
+            if (dir) buttonText.color = Color.Lerp(normalColor, blinkColor, t);
+            else buttonText.color = Color.Lerp(blinkColor, normalColor, t);
+            time += Time.fixedDeltaTime;
+
+            if (time > blinkSpeed)
+            {
+                dir = !dir;
+                time %= blinkSpeed;
+            }
+
+            yield return null;
         }
     }
 
