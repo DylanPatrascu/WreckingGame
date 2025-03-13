@@ -49,6 +49,7 @@ public class PlayerControls : MonoBehaviour
     private void Start()
     {
         Physics.gravity = new Vector3(0, 0, 9.81f);
+        Physics2D.gravity = new Vector3(0, 0, 9.81f);
 
         movementVec = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
