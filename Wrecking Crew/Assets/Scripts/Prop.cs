@@ -4,33 +4,41 @@ using UnityEngine;
 
 public class Prop : MonoBehaviour
 {
-    [SerializeField] private GameObject collider2d;
-    [SerializeField] private GameObject destroyParticles;
-    [SerializeField] private SpriteRenderer propSprite;
+    [SerializeField] private GameObject c2D;
+    [SerializeField] private ParticleSystem destroyParticles;
     [SerializeField] GameLogic gameLogic;
+    [SerializeField] private float time = 1;
 
 
     private void Start()
     {
         gameLogic = FindAnyObjectByType<GameLogic>();
+        destroyParticles.Pause();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Ball")
+        {
+            destroyParticles.Play();
+            GetComponent<Collider>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            c2D.SetActive(false);
 
-        Debug.Log("Collide");
-
-        DestroyProp();
+            gameLogic.AddTime(time);
+        }
     }
 
-    private void DestroyProp()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        destroyParticles.SetActive(true);
-        propSprite.enabled = false;
+        if (collision.gameObject.tag == "Ball")
+        {
+            destroyParticles.Play();
+            GetComponent<Collider>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            c2D.SetActive(false);
 
-        collider2d.SetActive(false);
-        gameObject.SetActive(false);
-
-        gameLogic.AddTime(2);
+            gameLogic.AddTime(time);
+        }
     }
 }
