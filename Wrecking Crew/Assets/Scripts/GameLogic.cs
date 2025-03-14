@@ -224,6 +224,7 @@ public class GameLogic : MonoBehaviour
         float t;
         TMP_Text timeAddedLabelText = timeAddedLabelGO.GetComponent<TMP_Text>();
         timeAddedLabelText.text = "+" + time.ToString();
+        Debug.Log(timeAddedLabelText.text);
         Color startColor = timeAddedLabelText.color;
         Color endColor = startColor;
         endColor.a = 0;

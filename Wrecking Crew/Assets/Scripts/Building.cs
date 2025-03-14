@@ -10,6 +10,7 @@ public class Building : MonoBehaviour
     [SerializeField] private Sprite[] damageSprites;
 
     [SerializeField] private int health = 3;
+    [SerializeField] private float time = 3;
 
     [SerializeField] GameLogic gameLogic;
 
@@ -71,6 +72,6 @@ public class Building : MonoBehaviour
         collider2d.SetActive(false);
         gameObject.SetActive(false);
 
-        gameLogic.AddTime(3);
+        gameLogic.AddTime(time);
     }
 }

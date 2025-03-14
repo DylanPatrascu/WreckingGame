@@ -262,6 +262,7 @@ MonoBehaviour:
   - {fileID: -752573406, guid: 521505dba629c4da7b660b2a26be00d6, type: 3}
   - {fileID: -752573406, guid: 521505dba629c4da7b660b2a26be00d6, type: 3}
   health: 1
+  time: 1
   gameLogic: {fileID: 0}
 --- !u!1 &4408944559149982383
 GameObject:

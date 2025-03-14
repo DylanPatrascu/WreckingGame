@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Building2Chunk3 1
+  m_Name: PoliceCar
   m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,9 +24,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: daed037688e734b7e88cf9c3ffd8cb47, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 48b2d0b0b8ab34bce82680fb4298c869, type: 3}
+        m_Scale: {x: 0.66666, y: 1}
+        m_Offset: {x: 0.33333, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors: []
