@@ -15,11 +15,6 @@ public class Building : MonoBehaviour
 
     private int maxHealth;
 
-    private void OnEnable()
-    {
-        //collider2d.AddComponent<>
-    }
-
     private void Start()
     {
         maxHealth = health;

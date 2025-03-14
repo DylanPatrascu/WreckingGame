@@ -4847,7 +4847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5150496423206035094
 Transform:
   m_ObjectHideFlags: 0
@@ -9839,8 +9839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 7935746839118103296}
-  destroyParticles: {fileID: 1222364942191754876}
-  explosionParticles: {fileID: 0}
+  destroyParticles:
+  - {fileID: 8509005052830875094}
   buildingSprite: {fileID: 2331191017194448282}
   damageSprites:
   - {fileID: 689379470, guid: 823b71377aa6a4080a1c560314254875, type: 3}

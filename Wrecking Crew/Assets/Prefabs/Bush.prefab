@@ -145,7 +145,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12875557, y: -8.023249}
+  m_Offset: {x: -0.16104603, y: -8.001722}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4751625, y: 3.7882004}
+  m_Size: {x: 2.5064526, y: 1.807724}
   m_EdgeRadius: 0
 --- !u!1 &856131862479378382
 GameObject:
@@ -211,8 +211,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.625924, y: 4.5332184, z: 18}
-  m_Center: {x: 0.02197504, y: -9.061598, z: 0}
+  m_Size: {x: 2.4947624, y: 1.7562504, z: 18}
+  m_Center: {x: 0.032738686, y: -9.029307, z: 0}
 --- !u!54 &1797127401142763364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 660445500174528689}
-  destroyParticles: {fileID: 4614160524838231370}
-  explosionParticles: {fileID: 7182310219723751605}
+  destroyParticles:
+  - {fileID: 2803618310906371808}
   buildingSprite: {fileID: 8185749790491848282}
   damageSprites:
   - {fileID: -752573406, guid: 521505dba629c4da7b660b2a26be00d6, type: 3}
@@ -296,7 +296,6 @@ Transform:
   - {fileID: 3227511891470996038}
   - {fileID: 3950946699237358141}
   - {fileID: 1694551695448325536}
-  - {fileID: 5643607462457068982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8185749790491848282
@@ -359,6 +358,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8561712152632397034}
     m_Modifications:
+    - target: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153426503307276997, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58f9ef310cce2214390131829f5b494c, type: 2}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -413,75 +420,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 2786838387782837373}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4614160524838231370 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+--- !u!198 &2803618310906371808 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 2786838387782837373}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5251097174233689837
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8561712152632397034}
-    m_Modifications:
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-      propertyPath: m_Name
-      value: Explosion Particles (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!4 &5643607462457068982 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 472238152283513691, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-  m_PrefabInstance: {fileID: 5251097174233689837}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7182310219723751605 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
-  m_PrefabInstance: {fileID: 5251097174233689837}
   m_PrefabAsset: {fileID: 0}

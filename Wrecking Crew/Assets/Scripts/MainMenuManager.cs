@@ -48,7 +48,7 @@ public class MainMenuManager : MonoBehaviour
         if (mainMenuBackground && button1Sprite)
             mainMenuBackground.sprite = button1Sprite;
         animator.Play("Start");
-        StartCoroutine(Transition("SampleScene"));
+        StartCoroutine(Transition("GameScene"));
     }
 
 

@@ -95,8 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 3295069174430944077}
-  destroyParticles: {fileID: 6413978064378413033}
-  explosionParticles: {fileID: 1634922305959780901}
+  destroyParticles:
+  - {fileID: 4603732572565552195}
+  - {fileID: 505929343334618141}
   buildingSprite: {fileID: 7274276981681266174}
   damageSprites:
   - {fileID: 21300000, guid: 25ebc7801a6c6485ea9cb4d3a580cb07, type: 3}
@@ -288,8 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 7410005187823299704}
-  destroyParticles: {fileID: 7067031658665723714}
-  explosionParticles: {fileID: 6589125075964864951}
+  destroyParticles:
+  - {fileID: 356798853782160616}
+  - {fileID: 5387505249691983759}
   buildingSprite: {fileID: 5202015001181632040}
   damageSprites:
   - {fileID: 21300000, guid: b26bde331072848b0856681611a9ab54, type: 3}
@@ -1043,8 +1045,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 2505543772520961189}
-  destroyParticles: {fileID: 1635567539734106096}
-  explosionParticles: {fileID: 1895285480542320286}
+  destroyParticles:
+  - {fileID: 8093546255239924826}
+  - {fileID: 862559416520425638}
   buildingSprite: {fileID: 4678141653033596924}
   damageSprites:
   - {fileID: 21300000, guid: 6904a4cf6f7b54faba4f67bdc1a9b771, type: 3}
@@ -1306,8 +1309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 984547735485193759}
-  destroyParticles: {fileID: 5866654827042336139}
-  explosionParticles: {fileID: 6602775249342493570}
+  destroyParticles:
+  - {fileID: 4002066230716821025}
+  - {fileID: 5338102810464257466}
   buildingSprite: {fileID: 5789369626272662292}
   damageSprites:
   - {fileID: 21300000, guid: cc5e9e042153644e3852d6fecd0b52cd, type: 3}
@@ -1447,6 +1451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1134088804153256820}
     m_Modifications:
+    - target: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0200005
@@ -1491,19 +1499,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyParticles (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+--- !u!198 &356798853782160616 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+  m_PrefabInstance: {fileID: 339810574141423221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3863992396766422952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
-  m_PrefabInstance: {fileID: 339810574141423221}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7067031658665723714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 339810574141423221}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3548409911990114502
@@ -1558,14 +1570,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion Particles (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!1 &1895285480542320286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+--- !u!198 &862559416520425638 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
   m_PrefabInstance: {fileID: 3548409911990114502}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4013769513083059101 stripped
@@ -1581,6 +1601,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2673899364784485472}
     m_Modifications:
+    - target: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.83
@@ -1625,6 +1649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1635,9 +1663,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 4021317852850771132}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5866654827042336139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+--- !u!198 &4002066230716821025 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 4021317852850771132}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4450538524501019773
@@ -1692,14 +1720,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion Particles (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!1 &1634922305959780901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+--- !u!198 &505929343334618141 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
   m_PrefabInstance: {fileID: 4450538524501019773}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4273572095464435494 stripped
@@ -1715,6 +1751,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7530818947947572181}
     m_Modifications:
+    - target: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0200005
@@ -1759,6 +1799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyParticles (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1769,9 +1813,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 4586664579983410910}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6413978064378413033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+--- !u!198 &4603732572565552195 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 4586664579983410910}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8071103921789749231
@@ -1826,14 +1870,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion Particles (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!1 &6589125075964864951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+--- !u!198 &5387505249691983759 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
   m_PrefabInstance: {fileID: 8071103921789749231}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8543302491116446900 stripped
@@ -1849,6 +1901,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4848012244214337654}
     m_Modifications:
+    - target: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.92
@@ -1893,19 +1949,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyParticles (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9605722faee4213ac5aa81526f3226, type: 3}
---- !u!1 &1635567539734106096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396067495526480183, guid: af9605722faee4213ac5aa81526f3226, type: 3}
-  m_PrefabInstance: {fileID: 8076827907888641735}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4701264631357091610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
+  m_PrefabInstance: {fileID: 8076827907888641735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8093546255239924826 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19321994682907293, guid: af9605722faee4213ac5aa81526f3226, type: 3}
   m_PrefabInstance: {fileID: 8076827907888641735}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8129790086608297434
@@ -1960,14 +2020,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion Particles
       objectReference: {fileID: 0}
+    - target: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
---- !u!1 &6602775249342493570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3130868266076696152, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
+--- !u!198 &5338102810464257466 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4235091448497379424, guid: f0ae4446db0c241bda789a9e595ee1e2, type: 3}
   m_PrefabInstance: {fileID: 8129790086608297434}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8529653980135521921 stripped
