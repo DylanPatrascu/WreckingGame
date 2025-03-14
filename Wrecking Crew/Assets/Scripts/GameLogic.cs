@@ -37,6 +37,8 @@ public class GameLogic : MonoBehaviour
     [SerializeField] float timeAddedLabelTime = 5f;
     [SerializeField] float timeAddedLabelFadeTime = 0.5f;
 
+    [SerializeField] private AudioManager audioManager;
+
     public static float timeRemaining;
 
     public static bool gameRunning;
@@ -200,6 +202,7 @@ public class GameLogic : MonoBehaviour
         {
             t = time / gameOverScreenTime;
             Time.timeScale = Mathf.Lerp(1, 0, t);
+            audioManager.SetPitch(Mathf.Lerp(1, 0, t));
             gameOverImage.color = Color.Lerp(startColor, endColor, t);
 
             time += Time.fixedDeltaTime;
@@ -207,6 +210,7 @@ public class GameLogic : MonoBehaviour
         }
 
         Time.timeScale = 0;
+        audioManager.StopMusic();
         gameOverImage.color = endColor;
         gameOverText.gameObject.SetActive(true);
         //yield return new WaitForSeconds(1);

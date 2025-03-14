@@ -26,6 +26,12 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float shakeTime = 0.5f;
     [SerializeField] private float cameraSpeed = 10f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip engineSound;
+    [SerializeField] private float minPitch = 1;
+    [SerializeField] private float maxPitch = 4;
+
     private Rigidbody2D rb;
 
     private Vector2 movementVec;
@@ -33,6 +39,7 @@ public class PlayerControls : MonoBehaviour
     private Vector2 velocity;
     private float armPos;
     private bool shaking = false;
+
 
     private Coroutine cameraShakeCoroutine;
 
@@ -72,6 +79,8 @@ public class PlayerControls : MonoBehaviour
             
             rb.velocity = velocity;
 
+            audioSource.pitch = Mathf.Lerp(minPitch, maxPitch, rb.velocity.magnitude / 10);
+
             // Rotate body
             if (rb.velocity != Vector2.zero)
             {
@@ -87,6 +96,10 @@ public class PlayerControls : MonoBehaviour
                 arm.transform.rotation = Quaternion.Euler(new Vector3(0, 0, armPos));
             }
             arm.transform.rotation = Quaternion.Euler(new Vector3(0, 0, armPos));
+        }
+        else
+        {
+            if (audioSource.isPlaying) audioSource.Stop();
         }
 
     }

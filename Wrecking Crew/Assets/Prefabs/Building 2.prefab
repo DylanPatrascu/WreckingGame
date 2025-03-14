@@ -105,7 +105,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 04d4743208b094036a63f087c2caa80e, type: 3}
   - {fileID: 21300000, guid: 66499e977f24d4b6783d15992d3dae11, type: 3}
   health: 4
+  time: 3
   gameLogic: {fileID: 0}
+  bigBooms:
+  - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}
+  - {fileID: 8300000, guid: 1a43d426b79f0624182241218bdf51ee, type: 3}
 --- !u!1 &445476911545298821
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +320,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3eef835e16f94b888d263146cd4c1ef, type: 3}
   - {fileID: 21300000, guid: f2e3ec76ff3f7430ebdafe472174579a, type: 3}
   health: 4
+  time: 3
   gameLogic: {fileID: 0}
+  bigBooms:
+  - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}
+  - {fileID: 8300000, guid: 1a43d426b79f0624182241218bdf51ee, type: 3}
 --- !u!1 &984547735485193759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1114,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b9dee2b2cb5034d96a85920b7df1f73e, type: 3}
   - {fileID: 21300000, guid: 9e8e4602b22064ed88e9295387bf5895, type: 3}
   health: 4
+  time: 3
   gameLogic: {fileID: 0}
+  bigBooms:
+  - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}
+  - {fileID: 8300000, guid: 1a43d426b79f0624182241218bdf51ee, type: 3}
 --- !u!1 &7410005187823299704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1382,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3e1e65e6ab7be4b02971c8b5788473fe, type: 3}
   - {fileID: 21300000, guid: 2c383e82cfaa84402a724466b1773c75, type: 3}
   health: 4
+  time: 3
   gameLogic: {fileID: 0}
+  bigBooms:
+  - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}
+  - {fileID: 8300000, guid: 1a43d426b79f0624182241218bdf51ee, type: 3}
 --- !u!1 &8143769712974510039
 GameObject:
   m_ObjectHideFlags: 0

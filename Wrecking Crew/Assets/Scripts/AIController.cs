@@ -16,6 +16,11 @@ public class AIController : MonoBehaviour
     [SerializeField] private float speed = 5;
     [SerializeField] private float acceleraion = 4;
 
+    [SerializeField] private AudioSource source;
+    [SerializeField] private float distanceThreshhold;
+    [SerializeField] private AudioClip sirenClip;
+    [SerializeField] private AudioClip policeDeathClip;
+
     private Vector3 prevPosition;
 
     private bool dead = false;
@@ -43,6 +48,17 @@ public class AIController : MonoBehaviour
             }
             prevPosition = transform.position;
         }
+
+        float distanceToTarget = Vector2.Distance(transform.position, target.position);
+        if (distanceToTarget < distanceThreshhold)
+        {
+            source.volume = 1 - Vector2.Distance(transform.position, target.position) / distanceThreshhold;
+        }
+        else
+        {
+            source.volume = 0;
+        }
+        
         
     }
 
@@ -59,7 +75,8 @@ public class AIController : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             c2D.SetActive(false);
             dead = true;
-
+            source.Stop();
+            source.PlayOneShot(policeDeathClip);
             gameLogic.AddTime(time);
         }
     }

@@ -14,12 +14,16 @@ public class Building : MonoBehaviour
 
     [SerializeField] GameLogic gameLogic;
 
+    [SerializeField] private List<AudioClip> bigBooms;
+
     private int maxHealth;
+    private AudioManager audioManager;
 
     private void Start()
     {
         maxHealth = health;
         gameLogic = FindAnyObjectByType<GameLogic>();
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -66,6 +70,8 @@ public class Building : MonoBehaviour
         {
             particle.Play();
         }
+
+        audioManager.PlayRandomSound(bigBooms);
 
         buildingSprite.enabled = false;
 

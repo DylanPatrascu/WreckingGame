@@ -10,9 +10,11 @@ public class AudioManager : MonoBehaviour
 
     private bool started = false;
 
+    private bool running = true;
+
     private void Update()
     {
-        if (!source.isPlaying)
+        if (!source.isPlaying && running)
         {
             if (!started)
             {
@@ -21,6 +23,27 @@ public class AudioManager : MonoBehaviour
             }
             else source.PlayOneShot(themeLoop);
         }
+    }
+
+    public void StopMusic()
+    {
+        source.Stop();
+        running = false;
+    }
+
+    public void SetPitch(float pitch)
+    {
+        source.pitch = pitch;
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        source.PlayOneShot(clip);
+    }
+
+    public void PlayRandomSound(List<AudioClip> clips)
+    {
+        source.PlayOneShot(clips[Random.Range(0, clips.Count)]);
     }
 
 }
