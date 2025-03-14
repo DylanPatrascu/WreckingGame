@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &324396468254728501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4263915638486614490}
+  m_Layer: 0
+  m_Name: Trees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4263915638486614490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324396468254728501}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6395697, y: 0.4994487, z: 0.06569354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1842597094406804492}
+  - {fileID: 3817497964094824206}
+  - {fileID: 6308730043244409209}
+  - {fileID: 869567965888076947}
+  m_Father: {fileID: 4072558323900362565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445476911545298821
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +123,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1363404770430182861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627589096047639185}
+  m_Layer: 0
+  m_Name: Bushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &627589096047639185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363404770430182861}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6395697, y: 0.4994487, z: 0.06569354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6884309658723427428}
+  - {fileID: 1495020374339210597}
+  - {fileID: 20141553105000538}
+  - {fileID: 7962434626562474043}
+  - {fileID: 8833892940381086055}
+  - {fileID: 7465950892947037126}
+  - {fileID: 1199866872392551659}
+  - {fileID: 8824743980218795990}
+  m_Father: {fileID: 4072558323900362565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974423661472838509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,6 +5182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3255727757137404914}
   - component: {fileID: 941595965159802786}
+  - component: {fileID: 4015976906909932623}
   m_Layer: 5
   m_Name: Building4_park_under
   m_TagString: Untagged
@@ -5182,6 +5257,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4015976906909932623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237557167269167443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &4239614814291366811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,6 +5411,8 @@ Transform:
   m_Children:
   - {fileID: 9117615027705291662}
   - {fileID: 4848012244214337654}
+  - {fileID: 4263915638486614490}
+  - {fileID: 627589096047639185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8076827907888641735
@@ -5340,11 +5433,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 69ea427b20ebf5542a739cf121f21ae0, type: 2}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.92
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.56
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3542247641642195421, guid: af9605722faee4213ac5aa81526f3226, type: 3}
       propertyPath: m_LocalPosition.z
