@@ -40,6 +40,8 @@ public class PlayerControls : MonoBehaviour
     private float armPos;
     private bool shaking = false;
 
+    private float prevVelocity;
+
 
     private Coroutine cameraShakeCoroutine;
 
@@ -155,5 +157,6 @@ public class PlayerControls : MonoBehaviour
         offset.m_Offset = Vector3.zero;
         shaking = false;
     }
+
 
 }

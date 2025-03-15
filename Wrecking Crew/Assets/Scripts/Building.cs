@@ -35,18 +35,23 @@ public class Building : MonoBehaviour
 
             if (colliderRigidbody != null)
             {
-                if (colliderRigidbody.velocity.magnitude > 10)
-                {
-                    health -= 1;
-                }
-                else if (colliderRigidbody.velocity.magnitude > 20)
-                {
-                    health -= 2;
-                }
-                else if (colliderRigidbody.velocity.magnitude > 30)
+                if (Ball.prevVelocity > 75)
                 {
                     health -= 3;
+
+                    Debug.Log("BIIIIG hit: " + Ball.prevVelocity.ToString());
                 }
+                else if (Ball.prevVelocity > 50)
+                {
+                    health -= 2;
+                    Debug.Log("Medium hit: " + Ball.prevVelocity.ToString());
+                }
+                else if (Ball.prevVelocity > 25)
+                {
+                    health -= 1;
+                    Debug.Log("Small hit: " + Ball.prevVelocity.ToString());
+                }
+                
             }
 
             if (health > 0)

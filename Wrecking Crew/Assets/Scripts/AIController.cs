@@ -32,6 +32,9 @@ public class AIController : MonoBehaviour
         agent.acceleration = acceleraion;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        target = FindObjectOfType<PlayerControls>().transform;
+        gameLogic = FindObjectOfType<GameLogic>();
     }
 
     private void Update()

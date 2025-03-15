@@ -14,7 +14,6 @@ public class PoliceBounce : MonoBehaviour
         {
             Vector2 dir = (collision.gameObject.transform.position - transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = dir * bounceStrength;
-            Debug.Log("Here");
         }
     }
 }
