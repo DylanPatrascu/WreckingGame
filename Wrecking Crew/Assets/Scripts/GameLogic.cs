@@ -70,7 +70,7 @@ public class GameLogic : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                gameTimerText.text = Mathf.Floor(timeRemaining % 60).ToString("000");
+                gameTimerText.text = Mathf.Floor(timeRemaining).ToString("000");
                 timeRemaining -= Time.deltaTime;
             }
             else

@@ -84,7 +84,7 @@ public class MainMenuManager : MonoBehaviour
         if (mainMenuBackground && button4Sprite)
             mainMenuBackground.sprite = button4Sprite;
         animator.Play("Quit");
-        StartCoroutine(Transition("Quit"));
+        StartCoroutine(Transition(null));
     }
 
     private IEnumerator Transition(string sceneName)
