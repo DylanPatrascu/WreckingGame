@@ -11,7 +11,7 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private PlayerControls player;
     [SerializeField] private new CinemachineVirtualCamera camera;
 
-    [Header("GameTimer")]
+    [Header("Game Timer")]
     [SerializeField] private Transform gameTimer;
     [SerializeField] private TMP_Text gameTimerText;
     [SerializeField] private float startTime = 10.0f;

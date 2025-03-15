@@ -1,41 +1,45 @@
 using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
 
-    //[Header("Movement Settings")]
+    [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private float acceleration = 2.0f;
     [SerializeField] private float deceleration = 2.0f;
     [SerializeField] private float bodyRotationSpeed = 200f;
 
-    //[Header("Arm Settings")]
+    [Header("Arm Settings")]
     [SerializeField] private GameObject arm;
     [SerializeField] private float armRotationSpeed = 100f;
 
-    //[Header("Alt Sprites")]
+    [Header("Alt Sprites")]
     [SerializeField] private SpriteRenderer ballSprite;
     [SerializeField] public Sprite currentsprite;
     [SerializeField] public Sprite[] sprites;
 
-    //[Header("Camera Settings")]
+    [Header("Camera Settings")]
     [SerializeField] private CinemachineVirtualCamera playerCamera;
     [SerializeField] private float minFOV = 60f;
     [SerializeField] private float maxFOV = 80f;
     [SerializeField] private float shakeTime = 0.5f;
     [SerializeField] private float cameraSpeed = 10f;
 
-    //[Header("Audio")]
+    [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip engineSound;
     [SerializeField] private float minPitch = 1;
     [SerializeField] private float maxPitch = 4;
+
+    [Header("Pause")]
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private UnityEngine.UI.Image pauseImage;
+    [SerializeField] private float pauseTime;
 
     private Rigidbody2D rb;
 
@@ -45,7 +49,11 @@ public class PlayerControls : MonoBehaviour
     private float armPos;
     private bool shaking = false;
 
+    private Color startColor;
+    private Color endColor;
+
     private float prevVelocity;
+    private bool paused;
 
 
     private Coroutine cameraShakeCoroutine;
@@ -64,9 +72,13 @@ public class PlayerControls : MonoBehaviour
     {
         Physics.gravity = new Vector3(0, 0, 9.81f);
         Physics2D.gravity = new Vector3(0, 0, 9.81f);
+        paused = false;
 
         movementVec = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
+        startColor = pauseImage.color;
+        endColor = startColor;
+        endColor.a = 0.5f;
     }
 
     private void FixedUpdate()
@@ -127,6 +139,11 @@ public class PlayerControls : MonoBehaviour
             cameraShakeCoroutine = StartCoroutine(CameraShake());
     }
 
+    public void OnPause()
+    {
+        StartCoroutine(Pause());
+    }
+
     private IEnumerator CameraShake()
     {
         shaking = true;
@@ -163,5 +180,49 @@ public class PlayerControls : MonoBehaviour
         shaking = false;
     }
 
+    private IEnumerator Pause()
+    {
+        if (GameLogic.gameRunning)
+        {
+            float time = 0;
+            float t;
+            
+            endColor.a = 1;
+
+            if (!paused)
+            {
+                paused = true;
+
+                while (time < pauseTime)
+                {
+                    t = time / pauseTime;
+                    pauseImage.color = Color.Lerp(startColor, endColor, t);
+                    Time.timeScale = Mathf.Lerp(1, 0, t);
+                    time += Time.fixedDeltaTime;
+                    yield return null;
+                }
+                pauseImage.color = endColor;
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+                pauseMenu.GetComponentInChildren<UnityEngine.UI.Button>().Select();
+            }
+            else
+            {
+                paused = false;
+                pauseMenu.SetActive(false);
+                while (time < pauseTime)
+                {
+
+                    t = time / pauseTime;
+                    pauseImage.color = Color.Lerp(endColor, startColor, t);
+                    Time.timeScale = Mathf.Lerp(0f, 1, t);
+                    time += Time.fixedDeltaTime;
+                    yield return null;
+                }
+                pauseImage.color = startColor;
+                Time.timeScale = 1;
+            }
+        }
+    }
 
 }

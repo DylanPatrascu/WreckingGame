@@ -12,19 +12,6 @@ public class AudioManager : MonoBehaviour
 
     private bool running = true;
 
-    private void Update()
-    {
-        if (!source.isPlaying && running)
-        {
-            if (!started)
-            {
-                source.PlayOneShot(themeStart);
-                started = true;
-            }
-            else source.PlayOneShot(themeLoop);
-        }
-    }
-
     public void StopMusic()
     {
         source.Stop();
