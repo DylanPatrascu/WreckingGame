@@ -15,7 +15,6 @@ public class JunkMeter : MonoBehaviour
     private void Start()
     { 
         bar.offsetMax = new Vector2(-scaler.referenceResolution.x, bar.offsetMax.y);
-        Debug.Log(bar.offsetMax);
     }
 
     private void Update()

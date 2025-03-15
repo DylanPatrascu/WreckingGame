@@ -7,7 +7,6 @@ public class Prop : MonoBehaviour
     [SerializeField] private GameObject c2D;
     [SerializeField] private ParticleSystem destroyParticles;
     [SerializeField] GameLogic gameLogic;
-    [SerializeField] private float time = 1;
 
 
     private void Start()
@@ -25,7 +24,7 @@ public class Prop : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             c2D.SetActive(false);
 
-            gameLogic.AddTime(time);
+            //gameLogic.AddTime(time);
         }
     }
 
@@ -38,7 +37,7 @@ public class Prop : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             c2D.SetActive(false);
 
-            gameLogic.AddTime(time);
+            //gameLogic.AddTime(time);
         }
     }
 }

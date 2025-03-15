@@ -9947,4 +9947,4 @@ MonoBehaviour:
   - {fileID: 6978172173581653885}
   time: 1
   source: {fileID: 5644735228776431720}
-  policeDeathClip: {fileID: 0}
+  policeDeathClip: {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}

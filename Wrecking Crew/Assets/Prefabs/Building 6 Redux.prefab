@@ -210,7 +210,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 775b20a45fbdf48eab5c957d7f602f17, type: 3}
   - {fileID: 21300000, guid: 8e8aeab327de2419a8b0d8da2c6a0f7a, type: 3}
   health: 3
-  time: 3
+  time: 1
   gameLogic: {fileID: 0}
   bigBooms:
   - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}
@@ -510,7 +510,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e1e3c8391904a465797b85fa4fcb477b, type: 3}
   - {fileID: 21300000, guid: fd2651a01141a470dbceae123366b6fe, type: 3}
   health: 3
-  time: 3
+  time: 1
   gameLogic: {fileID: 0}
   bigBooms:
   - {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}

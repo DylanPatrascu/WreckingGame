@@ -5355,7 +5355,7 @@ MonoBehaviour:
   - {fileID: 1321589211, guid: 1476eb35a35fe43fe9b7105865c24ade, type: 3}
   - {fileID: 1321589211, guid: 1476eb35a35fe43fe9b7105865c24ade, type: 3}
   - {fileID: 1321589211, guid: 1476eb35a35fe43fe9b7105865c24ade, type: 3}
-  health: 2
+  health: 4
   time: 3
   gameLogic: {fileID: 0}
   bigBooms:
@@ -5427,6 +5427,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
@@ -5534,6 +5538,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5631,6 +5639,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
@@ -5730,6 +5742,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5828,6 +5844,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5925,6 +5945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
@@ -6026,6 +6050,10 @@ PrefabInstance:
     - target: {fileID: 2331191017194448282, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
+      propertyPath: time
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: bigBooms.Array.size
@@ -6130,6 +6158,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6227,6 +6259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
@@ -6330,6 +6366,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6430,6 +6470,10 @@ PrefabInstance:
     - target: {fileID: 2331191017194448282, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
+      propertyPath: time
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574884490475613866, guid: b31a1d84194344c31ad2bbbc8471b579, type: 3}
       propertyPath: bigBooms.Array.size
@@ -6608,6 +6652,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 627589096047639185}
     m_Modifications:
+    - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 99287493334215051, guid: 2ecdc95fe075f4bb9a5ddab3c6740aba, type: 3}
       propertyPath: bigBooms.Array.size
       value: 3

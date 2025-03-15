@@ -44,7 +44,6 @@ public class MainMenuManager : MonoBehaviour
             fadePanel.color = temp;
         }
 
-        gameObject.GetComponentInChildren<Button>().Select();
         audioManager = FindAnyObjectByType<AudioManager>();
 
     }

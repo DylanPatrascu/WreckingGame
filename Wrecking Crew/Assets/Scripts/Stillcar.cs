@@ -7,7 +7,6 @@ public class Stillcar : MonoBehaviour
     [SerializeField] private GameLogic gameLogic;
     [SerializeField] private GameObject c2D;
     [SerializeField] private List<ParticleSystem> destroyParticles;
-    [SerializeField] private float time = 1;
 
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip policeDeathClip;
@@ -17,7 +16,7 @@ public class Stillcar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameLogic = FindAnyObjectByType<GameLogic>();
     }
 
     // Update is called once per frame
@@ -41,7 +40,7 @@ public class Stillcar : MonoBehaviour
             dead = true;
             source.Stop();
             source.PlayOneShot(policeDeathClip);
-            gameLogic.AddTime(time);
+            //gameLogic.AddTime(time);
         }
     }
 

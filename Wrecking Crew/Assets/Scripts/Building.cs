@@ -33,24 +33,19 @@ public class Building : MonoBehaviour
         {
             Debug.Log("Balls");
             Rigidbody colliderRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Debug.Log(Ball.prevVelocity);
             if (colliderRigidbody != null)
             {
                 if (Ball.prevVelocity > 75)
                 {
                     health -= 3;
-
-                    Debug.Log("BIIIIG hit: " + Ball.prevVelocity.ToString());
                 }
                 else if (Ball.prevVelocity > 50)
                 {
                     health -= 2;
-                    Debug.Log("Medium hit: " + Ball.prevVelocity.ToString());
                 }
                 else if (Ball.prevVelocity > 25)
                 {
                     health -= 1;
-                    Debug.Log("Small hit: " + Ball.prevVelocity.ToString());
                 }
                 
             }
@@ -84,6 +79,6 @@ public class Building : MonoBehaviour
         collider2d.SetActive(false);
         gameObject.SetActive(false);
 
-        gameLogic.AddTime(time);
+        if (time > 0) gameLogic.AddTime(time);
     }
 }
