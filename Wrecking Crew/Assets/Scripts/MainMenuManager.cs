@@ -23,7 +23,12 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Color normalColor;
     [SerializeField] private Color blinkColor;
 
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip selectClip;
+    [SerializeField] private AudioClip activateClip;
+
     private Coroutine showSelected;
+    private AudioManager audioManager;
 
     private void Start()
     {
@@ -40,11 +45,13 @@ public class MainMenuManager : MonoBehaviour
         }
 
         gameObject.GetComponentInChildren<Button>().Select();
+        audioManager = FindAnyObjectByType<AudioManager>();
 
     }
 
     public void StartGame()
     {
+        audioManager.PlaySound(activateClip);
         if (mainMenuBackground && button1Sprite)
             mainMenuBackground.sprite = button1Sprite;
         animator.Play("Start");
@@ -54,6 +61,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void Customize()
     {
+        audioManager.PlaySound(activateClip);
         if (mainMenuBackground && button2Sprite)
             mainMenuBackground.sprite = button2Sprite;
         animator.Play("Customize");
@@ -62,6 +70,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void Options()
     {
+        audioManager.PlaySound(activateClip);
         if (mainMenuBackground && button3Sprite)
             mainMenuBackground.sprite = button3Sprite;
         animator.Play("Options");
@@ -70,10 +79,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void Quit()
     {
+        audioManager.PlaySound(activateClip);
         if (mainMenuBackground && button4Sprite)
             mainMenuBackground.sprite = button4Sprite;
         animator.Play("Quit");
-        StartCoroutine(Transition(""));
+        StartCoroutine(Transition("Quit"));
     }
 
     private IEnumerator Transition(string sceneName)
@@ -114,6 +124,7 @@ public class MainMenuManager : MonoBehaviour
     {
         if (showSelected != null) StopCoroutine(showSelected);
         showSelected = StartCoroutine(ShowSelected(button));
+        audioManager.PlaySound(selectClip);
     }
 
     public void ButtonDeselected(Button button)
