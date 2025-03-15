@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
@@ -30,6 +31,12 @@ public class GameLogic : MonoBehaviour
     [SerializeField] TMP_Text gameOverText;
     [SerializeField] float targetGameOverImageAlpha = 0.25f;
     [SerializeField] float gameOverScreenTime = 3;
+
+    [Header("WIN the game, bitch")]
+    [SerializeField] Image fadeOutImage;
+    [SerializeField] string winScene;
+    [SerializeField] float fadeOutTime;
+    [SerializeField] AudioHighPassFilter hp;
 
     [Header("Time Added Label")]
     [SerializeField] GameObject timeAddedLabel;
@@ -67,7 +74,11 @@ public class GameLogic : MonoBehaviour
             }
             else
             {
-                gameRunning = false;
+                StartCoroutine(GameOver());
+            }
+            if (JunkMeter.progress == JunkMeter.maxProgress)
+            {
+                StartCoroutine(WinGame());
             }
                 
         }
@@ -186,8 +197,6 @@ public class GameLogic : MonoBehaviour
             yield return null;
         }
 
-        StartCoroutine(GameOver());
-
     }
 
     private IEnumerator GameOver()
@@ -216,6 +225,31 @@ public class GameLogic : MonoBehaviour
         gameOverButtons.SetActive(true);
         gameOverButtons.gameObject.GetComponentInChildren<Button>().Select();
 
+    }
+
+    private IEnumerator WinGame()
+    {
+        float time = 0;
+        float t;
+        Color startColor = fadeOutImage.color;
+        Color endColor = startColor;
+        endColor.a = 1;
+
+        while (time < gameOverScreenTime)
+        {
+            t = time / gameOverScreenTime;
+            //Time.timeScale = Mathf.Lerp(1, 0, t);
+            hp.cutoffFrequency = Mathf.Lerp(10, 22000, t);
+            fadeOutImage.color = Color.Lerp(startColor, endColor, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        //Time.timeScale = 1;
+        audioManager.StopMusic();
+        fadeOutImage.color = endColor;
+        SceneManager.LoadScene(winScene);
     }
 
     private IEnumerator TimeAddedLabel(float time)

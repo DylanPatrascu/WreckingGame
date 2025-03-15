@@ -3,13 +3,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 
 public class EndMenuManager : MonoBehaviour
 {
     [SerializeField] private Image endMenuBackground;
+    [SerializeField] private Image fadeInImage;
     [SerializeField] private Image fadePanel;
     [SerializeField] private Sprite idleSprite;
 
+    [SerializeField] private float fadeInDuration = 5;
     [SerializeField] private float fadeDuration = 1f;
 
     [Header("Select Animations")]
@@ -33,26 +36,26 @@ public class EndMenuManager : MonoBehaviour
             fadePanel.color = temp;
         }
 
-        gameObject.GetComponentInChildren<Button>().Select();
         audioManager = FindAnyObjectByType<AudioManager>();
+        StartCoroutine(FadeIn());
 
     }
 
     public void restartGame()
     {
-        //audioManager.PlaySound(activateClip);
+        audioManager.PlaySound(activateClip);
         StartCoroutine(Transition("GameScene"));
     }
 
     public void Quit()
     {
-        //audioManager.PlaySound(activateClip);
+        audioManager.PlaySound(activateClip);
         StartCoroutine(Transition("Quit"));
     }
 
     public void Mainmenu()
     {
-        //audioManager.PlaySound(activateClip);
+        audioManager.PlaySound(activateClip);
         StartCoroutine(Transition("MainMenu"));
     }
     private IEnumerator Transition(string sceneName)
@@ -85,6 +88,26 @@ public class EndMenuManager : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+
+    private IEnumerator FadeIn()
+    {
+        float time = 0;
+        float t = 0;
+
+        Color old = fadeInImage.color;
+        Color newC = fadeInImage.color;
+        newC.a = 0;
+
+        while (t < fadeInDuration)
+        {
+            t = time / fadeInDuration;
+            fadeInImage.color = Color.Lerp(old, newC, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        fadeInImage.color = newC;
+
     }
 
     public void ButtonSelected(Button button)

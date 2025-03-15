@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 287864186}
   - component: {fileID: 287864185}
   - component: {fileID: 287864184}
+  - component: {fileID: 287864187}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1046,6 +1047,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!165 &287864187
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287864183}
+  m_Enabled: 1
+  m_CutoffFrequency: 10
+  m_HighpassResonanceQ: 1
 --- !u!1 &292195912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &699451604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2998,6 +3009,7 @@ RectTransform:
   - {fileID: 1416431773}
   - {fileID: 301053285}
   - {fileID: 1279973992}
+  - {fileID: 1920017459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6636,7 +6648,7 @@ MonoBehaviour:
   camera: {fileID: 8017812525851587496}
   gameTimer: {fileID: 1416431773}
   gameTimerText: {fileID: 1409687253}
-  startTime: 100
+  startTime: 10
   slideInTime: 1
   NearDeathColor: {r: 1, g: 0, b: 0, a: 1}
   NearDeathBlinkSpeed: 1
@@ -6647,11 +6659,15 @@ MonoBehaviour:
   gameOverText: {fileID: 1927019553}
   targetGameOverImageAlpha: 0.95
   gameOverScreenTime: 20
+  fadeOutImage: {fileID: 1920017460}
+  winScene: EndScene
+  fadeOutTime: 2.5
+  hp: {fileID: 287864187}
   timeAddedLabel: {fileID: 6360160042897070384, guid: 4f7d36265a09e4b49af93e425241c7ed, type: 3}
   timeAddedLabelGroup: {fileID: 2041253945}
   timeAddedLabelTime: 1
   timeAddedLabelFadeTime: 0.5
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 287864184}
 --- !u!1 &1831827677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,6 +7093,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 699451605}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1920017458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1920017459}
+  - component: {fileID: 1920017461}
+  - component: {fileID: 1920017460}
+  m_Layer: 5
+  m_Name: FadeInImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1920017459
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920017458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 720026113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1920017460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920017458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1920017461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920017458}
+  m_CullTransparentMesh: 1
 --- !u!1 &1927019552
 GameObject:
   m_ObjectHideFlags: 0
@@ -8240,6 +8331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light
       objectReference: {fileID: 0}
+    - target: {fileID: 2922536665671327245, guid: 0a662b939c0dae64fb5fb37ea42134b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5440909420588269550, guid: 0a662b939c0dae64fb5fb37ea42134b6, type: 3}
       propertyPath: gameLogic
       value: 
@@ -8419,6 +8514,10 @@ PrefabInstance:
     - target: {fileID: 5880707797442244297, guid: 8d2d94dcd9df190499722e339dcc65f6, type: 3}
       propertyPath: m_Name
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880707797442244297, guid: 8d2d94dcd9df190499722e339dcc65f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7344073113797743235, guid: 8d2d94dcd9df190499722e339dcc65f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8680,6 +8779,10 @@ PrefabInstance:
     - target: {fileID: 6446449165929162434, guid: 5ad1dfde8eb106c4aab6b670fa1fb2a7, type: 3}
       propertyPath: m_Name
       value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446449165929162434, guid: 5ad1dfde8eb106c4aab6b670fa1fb2a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677146441021397445, guid: 5ad1dfde8eb106c4aab6b670fa1fb2a7, type: 3}
       propertyPath: gameLogic
@@ -9096,6 +9199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stop Sign
       objectReference: {fileID: 0}
+    - target: {fileID: 7571288109717620891, guid: 6354997e7a66ad94aa0e0d86a52fb74e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9202,6 +9309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cone
       objectReference: {fileID: 0}
+    - target: {fileID: 4146781851917601144, guid: c57410bf020f5934b8807a3001d6b7e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9218,6 +9329,10 @@ PrefabInstance:
     - target: {fileID: 3230252777113776521, guid: 11e6a9be1b8e14ddcbe89beac001d1d1, type: 3}
       propertyPath: m_Name
       value: Car 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230252777113776521, guid: 11e6a9be1b8e14ddcbe89beac001d1d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5436958113438247922, guid: 11e6a9be1b8e14ddcbe89beac001d1d1, type: 3}
       propertyPath: m_LocalPosition.x

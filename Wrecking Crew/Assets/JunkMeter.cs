@@ -20,10 +20,8 @@ public class JunkMeter : MonoBehaviour
 
     private void Update()
     {
-        float ratio = ((float)progress / (float)maxProgress);
+        float ratio = 1 - ((float)progress / (float)maxProgress);
         bar.offsetMax = new Vector2(-scaler.referenceResolution.x * ratio, bar.offsetMax.y);
-        Debug.Log(progress / maxProgress);
-        Debug.Log(new Vector2(ratio, -scaler.referenceResolution.x * ratio));
     }
 
 }
