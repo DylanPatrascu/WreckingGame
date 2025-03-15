@@ -31,7 +31,6 @@ public class Building : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-            Debug.Log("Balls");
             Rigidbody colliderRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (colliderRigidbody != null)
             {

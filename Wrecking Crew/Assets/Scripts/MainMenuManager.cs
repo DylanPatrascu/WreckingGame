@@ -46,6 +46,8 @@ public class MainMenuManager : MonoBehaviour
 
         audioManager = FindAnyObjectByType<AudioManager>();
 
+        Time.timeScale = 1f;
+
     }
 
     public void StartGame()

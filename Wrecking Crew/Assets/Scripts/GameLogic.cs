@@ -27,7 +27,8 @@ public class GameLogic : MonoBehaviour
 
     [Header("Game Over")]
     [SerializeField] Image gameOverImage;
-    [SerializeField] GameObject gameOverButtons;
+    [SerializeField] GameObject gameOverButton1;
+    [SerializeField] GameObject gameOverButton2;
     [SerializeField] TMP_Text gameOverText;
     [SerializeField] float targetGameOverImageAlpha = 0.25f;
     [SerializeField] float gameOverScreenTime = 3;
@@ -95,7 +96,7 @@ public class GameLogic : MonoBehaviour
     {
         float timer = countDownTime;
         float startingOrthoSize = camera.m_Lens.OrthographicSize;
-
+        Time.timeScale = 1;
         while (timer > 0)
         {
             if (countdownTimerText.text != Mathf.Ceil(timer).ToString())
@@ -222,8 +223,8 @@ public class GameLogic : MonoBehaviour
         audioManager.StopMusic();
         gameOverImage.color = endColor;
         gameOverText.gameObject.SetActive(true);
-        gameOverButtons.SetActive(true);
-        gameOverButtons.gameObject.GetComponentInChildren<Button>().Select();
+        gameOverButton1.SetActive(true);
+        gameOverButton2.SetActive(true);
 
     }
 
@@ -238,7 +239,6 @@ public class GameLogic : MonoBehaviour
         while (time < gameOverScreenTime)
         {
             t = time / gameOverScreenTime;
-            //Time.timeScale = Mathf.Lerp(1, 0, t);
             hp.cutoffFrequency = Mathf.Lerp(10, 22000, t);
             fadeOutImage.color = Color.Lerp(startColor, endColor, t);
 
@@ -246,7 +246,6 @@ public class GameLogic : MonoBehaviour
             yield return null;
         }
 
-        //Time.timeScale = 1;
         audioManager.StopMusic();
         fadeOutImage.color = endColor;
         SceneManager.LoadScene(winScene);

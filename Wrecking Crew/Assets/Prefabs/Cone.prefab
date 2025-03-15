@@ -4922,7 +4922,6 @@ MonoBehaviour:
   c2D: {fileID: 4757925705938853104}
   destroyParticles: {fileID: 6200060251480236668}
   gameLogic: {fileID: 0}
-  time: 1
 --- !u!1 &4757925705938853104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4984,7 +4983,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0011812449, y: -0.006599188}

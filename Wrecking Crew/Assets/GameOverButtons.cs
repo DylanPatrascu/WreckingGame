@@ -19,14 +19,18 @@ public class GameOverButtons : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+        JunkMeter.progress = 0;
+        JunkMeter.maxProgress = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene(menuScene);
         Time.timeScale = 1;
+        SceneManager.LoadScene(menuScene);
+        
     }
 
     public void ButtonSelected(Button button)
