@@ -11,6 +11,13 @@ public class Ball : MonoBehaviour
     [SerializeField] List<AudioClip> ballHitSound;
 
     public static event Action OnBallHit;
+    public static float prevVelocity;
+
+    private void Start()
+    {
+        manager = FindFirstObjectByType<AudioManager>();
+        StartCoroutine(SetPrevVelocity());
+    }
 
     private void Update()
     {
@@ -22,6 +29,15 @@ public class Ball : MonoBehaviour
         hitParticle.Play();
         manager.PlaySound(ballHitSound[UnityEngine.Random.Range(0, ballHitSound.Count)]);
         OnBallHit.Invoke();
+    }
+
+    public IEnumerator SetPrevVelocity()
+    {
+        while (GameLogic.gameRunning)
+        {
+            prevVelocity = GetComponent<Rigidbody>().velocity.magnitude;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
 }

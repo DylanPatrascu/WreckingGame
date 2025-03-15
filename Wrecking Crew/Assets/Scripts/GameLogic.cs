@@ -213,7 +213,6 @@ public class GameLogic : MonoBehaviour
         audioManager.StopMusic();
         gameOverImage.color = endColor;
         gameOverText.gameObject.SetActive(true);
-        //yield return new WaitForSeconds(1);
         gameOverButtons.SetActive(true);
         gameOverButtons.gameObject.GetComponentInChildren<Button>().Select();
 
@@ -222,13 +221,15 @@ public class GameLogic : MonoBehaviour
     private IEnumerator TimeAddedLabel(float time)
     {
         GameObject timeAddedLabelGO = Instantiate(timeAddedLabel, timeAddedLabelGroup);
-        yield return new WaitForSeconds(timeAddedLabelTime);
+        
 
         float timer = 0;
         float t;
         TMP_Text timeAddedLabelText = timeAddedLabelGO.GetComponent<TMP_Text>();
         timeAddedLabelText.text = "+" + time.ToString();
-        Debug.Log(timeAddedLabelText.text);
+
+        yield return new WaitForSeconds(timeAddedLabelTime);
+
         Color startColor = timeAddedLabelText.color;
         Color endColor = startColor;
         endColor.a = 0;
