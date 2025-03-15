@@ -19,6 +19,11 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private GameObject arm;
     [SerializeField] private float armRotationSpeed = 100f;
 
+    [Header("Alt Sprites")]
+    [SerializeField] private SpriteRenderer ballSprite;
+    [SerializeField] public Sprite currentsprite;
+    [SerializeField] public Sprite[] sprites;
+
     [Header("Camera Settings")]
     [SerializeField] private CinemachineVirtualCamera playerCamera;
     [SerializeField] private float minFOV = 60f;
