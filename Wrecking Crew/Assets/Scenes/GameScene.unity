@@ -13954,7 +13954,7 @@ GameObject:
   - component: {fileID: 1437251500}
   - component: {fileID: 1437251499}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Screen Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14001,7 +14001,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 69f7fbbe3860e4f7b8dfad6790622171, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f52d9e558bfc447a8fcc9b9a86be12d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24678,7 +24678,7 @@ SpriteRenderer:
   m_SortingLayerID: 2122572517
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4625c35b0c8dd4649b258f29d4f9cb8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d78d52cf3fef2489f94c627657643a6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
