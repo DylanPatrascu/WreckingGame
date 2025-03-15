@@ -12,7 +12,7 @@ public class AIController : MonoBehaviour
 
     [SerializeField] private GameObject c2D;
     [SerializeField] private List<ParticleSystem> destroyParticles;
-    [SerializeField] private float time = 3;
+    [SerializeField] private float time = 5;
     [SerializeField] private float speed = 5;
     [SerializeField] private float acceleraion = 4;
 
