@@ -30,9 +30,9 @@ public class Building : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-
+            Debug.Log("Balls");
             Rigidbody colliderRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-
+            Debug.Log(Ball.prevVelocity);
             if (colliderRigidbody != null)
             {
                 if (Ball.prevVelocity > 75)

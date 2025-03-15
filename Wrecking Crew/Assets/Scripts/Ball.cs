@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour
 
     public IEnumerator SetPrevVelocity()
     {
-        while (GameLogic.gameRunning)
+        while (true)
         {
             prevVelocity = GetComponent<Rigidbody>().velocity.magnitude;
             yield return new WaitForSeconds(0.01f);
