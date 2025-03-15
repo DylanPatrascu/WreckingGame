@@ -9,29 +9,29 @@ using UnityEngine.UIElements;
 public class PlayerControls : MonoBehaviour
 {
 
-    [Header("Movement Settings")]
+    //[Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private float acceleration = 2.0f;
     [SerializeField] private float deceleration = 2.0f;
     [SerializeField] private float bodyRotationSpeed = 200f;
 
-    [Header("Arm Settings")]
+    //[Header("Arm Settings")]
     [SerializeField] private GameObject arm;
     [SerializeField] private float armRotationSpeed = 100f;
 
-    [Header("Alt Sprites")]
+    //[Header("Alt Sprites")]
     [SerializeField] private SpriteRenderer ballSprite;
     [SerializeField] public Sprite currentsprite;
     [SerializeField] public Sprite[] sprites;
 
-    [Header("Camera Settings")]
+    //[Header("Camera Settings")]
     [SerializeField] private CinemachineVirtualCamera playerCamera;
     [SerializeField] private float minFOV = 60f;
     [SerializeField] private float maxFOV = 80f;
     [SerializeField] private float shakeTime = 0.5f;
     [SerializeField] private float cameraSpeed = 10f;
 
-    [Header("Audio")]
+    //[Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip engineSound;
     [SerializeField] private float minPitch = 1;

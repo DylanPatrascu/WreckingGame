@@ -3615,6 +3615,7 @@ RectTransform:
   m_Children:
   - {fileID: 4293819}
   - {fileID: 1953846868}
+  - {fileID: 918431825}
   m_Father: {fileID: 720026113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4788,7 +4789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &434017319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10037,13 +10038,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 749187287}
+  m_Children: []
   m_Father: {fileID: 301053285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 240, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918431826
@@ -14805,7 +14805,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 087aee76de1a5a345b7449393398ae50, type: 2}
   m_sharedMaterial: {fileID: 97428440991217072, guid: 087aee76de1a5a345b7449393398ae50, type: 2}
@@ -18051,7 +18051,7 @@ MonoBehaviour:
   camera: {fileID: 8017812525851587496}
   gameTimer: {fileID: 1416431773}
   gameTimerText: {fileID: 1409687253}
-  startTime: 10
+  startTime: 30
   slideInTime: 1
   NearDeathColor: {r: 1, g: 0, b: 0, a: 1}
   NearDeathBlinkSpeed: 1
@@ -23274,9 +23274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40535054f79178544a711eb1305db85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  acceleration: 3
-  deceleration: 5
+  movementSpeed: 10
+  acceleration: 7
+  deceleration: 7
   bodyRotationSpeed: 200
   arm: {fileID: 7296817154180114750}
   armRotationSpeed: 500
@@ -23291,9 +23291,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f1d16886a51b9461994384563f3db332, type: 3}
   - {fileID: 21300000, guid: 1b06246234f364e6b9a797e89da00a82, type: 3}
   playerCamera: {fileID: 8017812525851587496}
-  minFOV: 12.12436
+  minFOV: 15
   maxFOV: 20
-  shakeTime: 0.1
+  shakeTime: 0.5
   cameraSpeed: 10
   audioSource: {fileID: 8190817210703371365}
   engineSound: {fileID: 8300000, guid: bdfac5617bd7f9b418f7d77d7508eff3, type: 3}

@@ -1,7 +1,5 @@
 using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,6 +49,8 @@ public class GameLogic : MonoBehaviour
 
     public static bool gameRunning;
 
+    public static float grace = 0;
+
     private void Start()
     {
         StopAllCoroutines();
@@ -70,7 +70,7 @@ public class GameLogic : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                gameTimerText.text = (Mathf.Floor(timeRemaining) / 60).ToString("00") + ":" + (Mathf.Floor(timeRemaining % 60)).ToString("00");
+                gameTimerText.text = Mathf.Floor(timeRemaining % 60).ToString("000");
                 timeRemaining -= Time.deltaTime;
             }
             else
@@ -83,6 +83,8 @@ public class GameLogic : MonoBehaviour
             }
                 
         }
+
+        if (grace > 0) grace -= Time.deltaTime;
         
     }
 
@@ -259,7 +261,16 @@ public class GameLogic : MonoBehaviour
         float timer = 0;
         float t;
         TMP_Text timeAddedLabelText = timeAddedLabelGO.GetComponent<TMP_Text>();
-        timeAddedLabelText.text = "+" + time.ToString();
+        if (time >= 0)
+        {
+            timeAddedLabelText.text = "+" + time.ToString();
+            timeAddedLabelText.color = Color.green;
+        }
+        else
+        {
+            timeAddedLabelText.text = "-" + ((int)Mathf.Floor(Mathf.Abs(time))).ToString();
+            timeAddedLabelText.color = Color.red;
+        }
 
         yield return new WaitForSeconds(timeAddedLabelTime);
 

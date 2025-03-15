@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca624ff158323244918affd606ab82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 10
+  bounceStrength: 15
 --- !u!1 &8304730330862366351
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,9 +5139,9 @@ MonoBehaviour:
   destroyParticles:
   - {fileID: 2234988894357650998}
   - {fileID: 5121278691760266310}
-  time: 1
-  speed: 10
-  acceleraion: 5
+  time: 10
+  speed: 15
+  acceleraion: 10
   source: {fileID: 5973348987877704705}
   distanceThreshhold: 50
   sirenClip: {fileID: 8300000, guid: fed4a54c5352d9843bcfdc0b19e59789, type: 3}
