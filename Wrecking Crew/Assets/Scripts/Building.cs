@@ -21,6 +21,7 @@ public class Building : MonoBehaviour
 
     private void Start()
     {
+        JunkMeter.maxProgress += 1;
         maxHealth = health;
         gameLogic = FindAnyObjectByType<GameLogic>();
         audioManager = FindAnyObjectByType<AudioManager>();
@@ -75,7 +76,7 @@ public class Building : MonoBehaviour
         {
             particle.Play();
         }
-
+        JunkMeter.progress += 1;
         audioManager.PlayRandomSound(bigBooms);
 
         buildingSprite.enabled = false;
