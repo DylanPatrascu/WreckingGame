@@ -6563,7 +6563,7 @@ ParticleSystem:
     rowMode: 1
     sprites:
     - sprite: {fileID: 1884074360, guid: b576080f1f9d44e93a336e9eeddc586d, type: 3}
-    - sprite: {fileID: -1180529135, guid: 48b2d0b0b8ab34bce82680fb4298c869, type: 3}
+    - sprite: {fileID: 1884074360, guid: b576080f1f9d44e93a336e9eeddc586d, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -9945,6 +9945,5 @@ MonoBehaviour:
   destroyParticles:
   - {fileID: 6901603120737519578}
   - {fileID: 6978172173581653885}
-  time: 1
   source: {fileID: 5644735228776431720}
   policeDeathClip: {fileID: 8300000, guid: ac8a436d4819e844ea3114cb058b8a3b, type: 3}

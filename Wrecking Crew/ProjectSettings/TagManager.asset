@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fountain
+    uniqueID: 112209365
+    locked: 0
   - name: Player
     uniqueID: 4062166259
     locked: 0
