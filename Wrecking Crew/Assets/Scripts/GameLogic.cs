@@ -10,6 +10,7 @@ public class GameLogic : MonoBehaviour
 
     [SerializeField] private PlayerControls player;
     [SerializeField] private new CinemachineVirtualCamera camera;
+    [SerializeField] private int level;
 
     [Header("Game Timer")]
     [SerializeField] private Transform gameTimer;
@@ -34,6 +35,8 @@ public class GameLogic : MonoBehaviour
     [Header("WIN the game, bitch")]
     [SerializeField] Image fadeOutImage;
     [SerializeField] string winScene;
+    [SerializeField] string winScene1;
+    [SerializeField] string winScene2;
     [SerializeField] float fadeOutTime;
     [SerializeField] AudioHighPassFilter hp;
 
@@ -79,7 +82,19 @@ public class GameLogic : MonoBehaviour
             }
             if (JunkMeter.progress == JunkMeter.maxProgress)
             {
-                StartCoroutine(WinGame());
+
+                if (level == 1)
+                {
+                    StartCoroutine(Winlevel1());
+                }
+                else if (level == 2)
+                {
+                    StartCoroutine(Winlevel2());
+                }
+                else if (level == 2)
+                {
+                    StartCoroutine(WinGame());
+                }
             }
                 
         }
@@ -251,6 +266,51 @@ public class GameLogic : MonoBehaviour
         audioManager.StopMusic();
         fadeOutImage.color = endColor;
         SceneManager.LoadScene(winScene);
+    }
+    private IEnumerator Winlevel1()
+    {
+        float time = 0;
+        float t;
+        Color startColor = fadeOutImage.color;
+        Color endColor = startColor;
+        endColor.a = 1;
+
+        while (time < gameOverScreenTime)
+        {
+            t = time / gameOverScreenTime;
+            hp.cutoffFrequency = Mathf.Lerp(10, 22000, t);
+            fadeOutImage.color = Color.Lerp(startColor, endColor, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        audioManager.StopMusic();
+        fadeOutImage.color = endColor;
+        SceneManager.LoadScene(winScene1);
+    }
+
+    private IEnumerator Winlevel2()
+    {
+        float time = 0;
+        float t;
+        Color startColor = fadeOutImage.color;
+        Color endColor = startColor;
+        endColor.a = 1;
+
+        while (time < gameOverScreenTime)
+        {
+            t = time / gameOverScreenTime;
+            hp.cutoffFrequency = Mathf.Lerp(10, 22000, t);
+            fadeOutImage.color = Color.Lerp(startColor, endColor, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        audioManager.StopMusic();
+        fadeOutImage.color = endColor;
+        SceneManager.LoadScene(winScene2);
     }
 
     private IEnumerator TimeAddedLabel(float time)

@@ -47,10 +47,23 @@ public class EndMenuManager : MonoBehaviour
         StartCoroutine(Transition("GameScene"));
     }
 
+    public void continueGame1()
+    {
+        audioManager.PlaySound(activateClip);
+        StartCoroutine(Transition("GameScene 2"));
+    }
+
+    public void continueGame2()
+    {
+        audioManager.PlaySound(activateClip);
+        StartCoroutine(Transition("GameScene"));
+    }
+
+
     public void Quit()
     {
         audioManager.PlaySound(activateClip);
-        StartCoroutine(Transition("Quit"));
+        StartCoroutine(Transition(""));
     }
 
     public void Mainmenu()

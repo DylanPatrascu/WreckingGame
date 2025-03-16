@@ -18679,6 +18679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7281378651618386342}
   camera: {fileID: 8017812525851587496}
+  level: 3
   gameTimer: {fileID: 1416431773}
   gameTimerText: {fileID: 1409687253}
   startTime: 30
@@ -18695,6 +18696,8 @@ MonoBehaviour:
   gameOverScreenTime: 2
   fadeOutImage: {fileID: 1920017460}
   winScene: EndScene
+  winScene1: EndScene 1
+  winScene2: EndScene 2
   fadeOutTime: 2.5
   hp: {fileID: 287864187}
   timeAddedLabel: {fileID: 6360160042897070384, guid: 4f7d36265a09e4b49af93e425241c7ed, type: 3}
