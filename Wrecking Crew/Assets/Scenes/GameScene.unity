@@ -2697,7 +2697,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -4955,7 +4955,7 @@ MonoBehaviour:
   - {fileID: 264221274}
   - {fileID: 1365240975}
   startingPoliceSpawnRate: 7.5
-  spawnAcceleration: 0.2
+  spawnAcceleration: 0.1
   policeCar: {fileID: 8304730330862366351, guid: 72edb5fb363d8fa4c926247e3afd9d6c, type: 3}
 --- !u!4 &434017320
 Transform:
@@ -6013,7 +6013,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -6963,7 +6963,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -7466,7 +7466,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -8635,7 +8635,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -10850,7 +10850,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -11204,7 +11204,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -11696,7 +11696,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -13742,7 +13742,7 @@ GameObject:
   - component: {fileID: 1279973994}
   - component: {fileID: 1279973993}
   m_Layer: 5
-  m_Name: Image
+  m_Name: JunkMeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13890,7 +13890,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -14359,7 +14359,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -16543,7 +16543,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -16739,7 +16739,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -17087,7 +17087,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -18809,7 +18809,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -20410,7 +20410,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -22727,7 +22727,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -22891,7 +22891,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -22952,7 +22952,7 @@ HingeJoint:
   m_Anchor: {x: 5.56, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -99.2936, y: 15.804, z: 5}
+  m_ConnectedAnchor: {x: -98.9936, y: 17.2024, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -23492,7 +23492,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -24001,6 +24001,7 @@ MonoBehaviour:
   shakeTime: 0.5
   cameraSpeed: 10
   audioSource: {fileID: 8190817210703371365}
+  audioManager: {fileID: 287864184}
   engineSound: {fileID: 8300000, guid: bdfac5617bd7f9b418f7d77d7508eff3, type: 3}
   minPitch: 1
   maxPitch: 4
@@ -24050,7 +24051,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.0000005960465, y: -0.00000037252906, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -24116,7 +24117,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000059604645, y: -0.00000014901161, z: -5}
+  m_ConnectedAnchor: {x: 0.000001192093, y: 0, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:

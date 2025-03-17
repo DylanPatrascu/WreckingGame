@@ -15,7 +15,7 @@ public class PoliceBounce : MonoBehaviour
     {
         if (collision.gameObject.layer == 7 && GameLogic.grace <= 0)
         {
-            gameLogic.AddTime(-10);
+            gameLogic.AddTime(-25);
             Vector2 dir = (collision.gameObject.transform.position - transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = dir * bounceStrength;
             GameLogic.grace = 2;

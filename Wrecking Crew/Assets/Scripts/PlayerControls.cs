@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerControls : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private AudioClip engineSound;
     [SerializeField] private float minPitch = 1;
     [SerializeField] private float maxPitch = 4;
@@ -54,6 +56,8 @@ public class PlayerControls : MonoBehaviour
 
     private float prevVelocity;
     private bool paused;
+
+    private int ballIndex = 0;
 
 
     private Coroutine cameraShakeCoroutine;
@@ -139,6 +143,11 @@ public class PlayerControls : MonoBehaviour
             cameraShakeCoroutine = StartCoroutine(CameraShake());
     }
 
+    public void OnSwapSkin()
+    {
+        ballSprite.sprite = sprites[++ballIndex % sprites.Length];
+    }
+
     public void OnPause()
     {
         StartCoroutine(Pause());
@@ -198,6 +207,7 @@ public class PlayerControls : MonoBehaviour
                     t = time / pauseTime;
                     pauseImage.color = Color.Lerp(startColor, endColor, t);
                     Time.timeScale = Mathf.Lerp(1, 0, t);
+                    audioManager.SetPitch(Mathf.Lerp(1, 0, t));
                     time += Time.fixedDeltaTime;
                     yield return null;
                 }
@@ -205,6 +215,7 @@ public class PlayerControls : MonoBehaviour
                 Time.timeScale = 0;
                 pauseMenu.SetActive(true);
                 pauseMenu.GetComponentInChildren<UnityEngine.UI.Button>().Select();
+                audioManager.SetPitch(0);
             }
             else
             {
@@ -216,11 +227,13 @@ public class PlayerControls : MonoBehaviour
                     t = time / pauseTime;
                     pauseImage.color = Color.Lerp(endColor, startColor, t);
                     Time.timeScale = Mathf.Lerp(0f, 1, t);
+                    audioManager.SetPitch(Mathf.Lerp(0, 1, t));
                     time += Time.fixedDeltaTime;
                     yield return null;
                 }
                 pauseImage.color = startColor;
                 Time.timeScale = 1;
+                audioManager.SetPitch(1);
             }
         }
     }

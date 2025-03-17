@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class MainMenuManager : MonoBehaviour
     private Coroutine showSelected;
     private AudioManager audioManager;
 
+    private GameObject LastSelected;
+
     private void Start()
     {
         if (mainMenuBackground && idleSprite)
@@ -48,6 +51,14 @@ public class MainMenuManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
+    }
+
+    private void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(LastSelected);
+        }
     }
 
     public void StartGame()
@@ -123,6 +134,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void ButtonSelected(Button button)
     {
+        LastSelected = button.gameObject;
         if (showSelected != null) StopCoroutine(showSelected);
         showSelected = StartCoroutine(ShowSelected(button));
         audioManager.PlaySound(selectClip);

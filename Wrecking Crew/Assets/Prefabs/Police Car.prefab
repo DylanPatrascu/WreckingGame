@@ -266,7 +266,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -297862561
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5139,8 +5139,8 @@ MonoBehaviour:
   destroyParticles:
   - {fileID: 2234988894357650998}
   - {fileID: 5121278691760266310}
-  time: 10
-  speed: 15
+  time: 5
+  speed: 20
   acceleraion: 10
   source: {fileID: 5973348987877704705}
   distanceThreshhold: 50
