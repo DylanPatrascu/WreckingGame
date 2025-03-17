@@ -1766,7 +1766,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -9.171761e-19, y: -0.0000000024108264, z: -2.2111525e-27, w: 1}
-  m_LocalPosition: {x: 2, y: 17.1, z: -10}
+  m_LocalPosition: {x: -52.9, y: -52.1, z: -10}
   m_LocalScale: {x: 16, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6364,7 +6364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7654,7 +7654,7 @@ Transform:
   m_GameObject: {fileID: 3465807296080001090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0000000024108264, z: -3.8044054e-10, w: 1}
-  m_LocalPosition: {x: 2, y: 17.1, z: -10}
+  m_LocalPosition: {x: -52.9, y: -52.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7795,7 +7795,7 @@ Transform:
   m_GameObject: {fileID: 4504836209562067550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 17.1, z: 0}
+  m_LocalPosition: {x: -52.9, y: -52.1, z: 0}
   m_LocalScale: {x: 16, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8262,12 +8262,6 @@ MonoBehaviour:
   currentsprite: {fileID: 21300000, guid: d40ea80f6acc6294e835ac9f7960e16a, type: 3}
   sprites:
   - {fileID: 21300000, guid: d40ea80f6acc6294e835ac9f7960e16a, type: 3}
-  - {fileID: 21300000, guid: 1d3e043f7da444e2a8d279ad61332ea7, type: 3}
-  - {fileID: 21300000, guid: e38327f3b7cab402182163e943d9f5c7, type: 3}
-  - {fileID: 21300000, guid: 1094d591fa21247baa8d41e870958428, type: 3}
-  - {fileID: 21300000, guid: d57461306cd1f4c1c9df53eae1ca5844, type: 3}
-  - {fileID: 21300000, guid: f1d16886a51b9461994384563f3db332, type: 3}
-  - {fileID: 21300000, guid: 1b06246234f364e6b9a797e89da00a82, type: 3}
   playerCamera: {fileID: 8017812525851587496}
   minFOV: 15
   maxFOV: 20
