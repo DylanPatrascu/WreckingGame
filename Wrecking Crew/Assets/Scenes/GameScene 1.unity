@@ -1068,8 +1068,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   policeSpawnPoint:
   - {fileID: 237226646}
-  - {fileID: 0}
-  - {fileID: 0}
   startingPoliceSpawnRate: 7.5
   spawnAcceleration: 0.2
   policeCar: {fileID: 8304730330862366351, guid: 72edb5fb363d8fa4c926247e3afd9d6c, type: 3}
