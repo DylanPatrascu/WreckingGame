@@ -78,6 +78,7 @@ public class GameLogic : MonoBehaviour
             }
             else
             {
+                gameTimerText.text = "000";
                 StartCoroutine(GameOver());
             }
             if (JunkMeter.progress == JunkMeter.maxProgress)
